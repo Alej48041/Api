@@ -1,0 +1,18 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Package {
+  id        Int     @id @default(autoincrement())
+  contenido String
+  peso      Float
+  largo     Float
+  alto      Float
+  ancho     Float
+}
